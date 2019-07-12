@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.HomeActivity"></activity>
+        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".input.InputGroup" />
+        <activity android:name=".input.ScienceInput" />
+        <activity android:name=".input.ArtsInput" />
+        <activity android:name=".input.CommerceInput"></activity>
     </application>
 
 </manifest>

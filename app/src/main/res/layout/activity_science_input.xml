@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".input.ScienceInput">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:inputType="number"
+                android:layout_width="250dp"
+                android:gravity="left"
+                android:layout_height="35dp"
+                android:hint="SSC GPA"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                />
+
+            <EditText
+                android:id="@+id/ssc_gpa"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter SSC GPA"
+                />
+            <TextView
+                android:inputType="number"
+                android:layout_width="250dp"
+                android:gravity="left"
+                android:layout_height="35dp"
+                android:hint="HSC GPA"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                />
+            <EditText
+                android:id="@+id/bangla1"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Bangla 1st Gpa"
+                />
+            <EditText
+                android:id="@+id/bangla2"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Bangla 2nd Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/english1"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Endlish 1st Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/english2"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter English 2nd Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/ict"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter ICT Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/physics1"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Physics 1st Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/physics2"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Physics 2nd Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/chemistry1"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Chemistry 1st Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/chemistry2"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Chemistry 2nd Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/highermath1"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Higher Math 1st Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/highermath2"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Higher Math 2nd Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/biology1"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Biology 1st Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/biology2"
+                android:inputType="number"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter Biology 2nd Gpa"
+                android:layout_marginTop="20dp"
+                />
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:text="Submit"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="50dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
