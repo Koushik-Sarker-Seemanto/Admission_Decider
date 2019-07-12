@@ -24,7 +24,7 @@
                 android:layout_width="250dp"
                 android:gravity="left"
                 android:layout_height="35dp"
-                android:hint="SSC GPA"
+                android:text="SSC GPA"
                 android:textSize="20dp"
                 android:layout_marginTop="20dp"
                 android:textColor="#000000"
@@ -44,7 +44,26 @@
                 android:layout_width="250dp"
                 android:gravity="left"
                 android:layout_height="35dp"
-                android:hint="HSC GPA"
+                android:text="HSC GPA"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                />
+            <EditText
+                android:id="@+id/hsc_gpa"
+                android:inputType="numberDecimal"
+                android:background="@drawable/button_background2"
+                android:layout_width="250dp"
+                android:gravity="center"
+                android:layout_height="35dp"
+                android:hint="Enter HSC Gpa"
+                />
+            <TextView
+                android:inputType="numberDecimal"
+                android:layout_width="250dp"
+                android:gravity="left"
+                android:layout_height="35dp"
+                android:text="Individual HSC GPA"
                 android:textSize="20dp"
                 android:layout_marginTop="20dp"
                 android:textColor="#000000"
@@ -121,17 +140,6 @@
                 android:gravity="center"
                 android:layout_height="35dp"
                 android:hint="Enter Biology Gpa"
-                android:layout_marginTop="20dp"
-                />
-
-            <EditText
-                android:id="@+id/hsc_gpa"
-                android:inputType="numberDecimal"
-                android:background="@drawable/button_background2"
-                android:layout_width="250dp"
-                android:gravity="center"
-                android:layout_height="35dp"
-                android:hint="Enter HSC Gpa"
                 android:layout_marginTop="20dp"
                 />
 

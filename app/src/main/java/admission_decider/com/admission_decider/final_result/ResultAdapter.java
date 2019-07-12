@@ -1,6 +1,7 @@
 package admission_decider.com.admission_decider.final_result;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,10 +35,13 @@ public class ResultAdapter extends AbstractorAdapter  {
 
          holder.universityName.setText(product.getUniversityName());
 
-         if(product.calculate())
-            holder.availability.setText("Available");
-         else
+         if(product.calculate()) {
+             holder.availability.setText("Available");
+         }
+         else {
+             holder.availability.setTextColor(Color.parseColor("#ff0000"));
              holder.availability.setText("Unavailable");
+         }
 
     }
 
@@ -50,17 +54,4 @@ public class ResultAdapter extends AbstractorAdapter  {
     }
 
 
-    /*class ResultAdapterViewHolder extends RecyclerView.ViewHolder{
-
-        TextView universityName, availability;
-
-        public ResultAdapterViewHolder(View itemView) {
-            super(itemView);
-            universityName = itemView.findViewById(R.id.UniversityNameId);
-            availability = itemView.findViewById(R.id.AvailabilityId);
-        }
-
-
-
-    }*/
 }
