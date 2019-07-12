@@ -4,10 +4,18 @@ import admission_decider.com.admission_decider.converter.Converter_gpa;
 import admission_decider.com.admission_decider.university.University;
 
 public class KUET extends EngineeringUniversity implements University {
+
+    private static KUET kuet;
     public Converter_gpa converter_gpa = Converter_gpa.getInstance();
     public final String uni_name = "Khulna University of Engineering & Technology";
 
-    public KUET() {
+    private KUET() {
+    }
+
+    public static KUET getInstance(){
+        if(kuet == null)
+            kuet = new KUET();
+        return kuet;
     }
 
     public boolean minimum_gpa_english(){

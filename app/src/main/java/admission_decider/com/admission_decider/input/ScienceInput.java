@@ -10,7 +10,9 @@ import android.widget.EditText;
 
 import admission_decider.com.admission_decider.R;
 import admission_decider.com.admission_decider.converter.Converter_gpa;
+import admission_decider.com.admission_decider.engineering_university.BUET;
 import admission_decider.com.admission_decider.engineering_university.CUET;
+import admission_decider.com.admission_decider.engineering_university.KUET;
 import admission_decider.com.admission_decider.engineering_university.RUET;
 import admission_decider.com.admission_decider.final_result.ResultObject;
 import admission_decider.com.admission_decider.final_result.ResultPage;
@@ -52,13 +54,14 @@ public class ScienceInput extends AppCompatActivity {
                 String highermathGpa = highermath.getText().toString().trim();
                 String biologyGpa = biology.getText().toString().trim();
                 String hscGpa = hsc_gpa.getText().toString().trim();
-                Log.d("TAGG", banglaGpa);
 
                 Converter_gpa converter_gpa = Converter_gpa.getInstance(banglaGpa,englishGpa,ictGpa,physicsGpa,chemistryGpa,highermathGpa,biologyGpa,sscGpa,hscGpa);
-                Log.d("HI","B A L");
+
                 ResultObject.universityList.clear();
                 ResultObject.universityList.add(RUET.getInstance());
                 ResultObject.universityList.add(CUET.getInstance());
+                ResultObject.universityList.add((KUET.getInstance()));
+                ResultObject.universityList.add(BUET.getInstance());
                 startActivity(new Intent(getApplicationContext(),ResultPage.class));
             }
         });

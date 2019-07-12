@@ -12,7 +12,7 @@ import admission_decider.com.admission_decider.R;
 import admission_decider.com.admission_decider.engineering_university.EngineeringUniversity;
 import admission_decider.com.admission_decider.university.University;
 
-public class ResultAdapter extends test  {
+public class ResultAdapter extends AbstractorAdapter  {
     private Context mCtx;
 
     public ResultAdapter(Context mCtx) {
@@ -21,7 +21,7 @@ public class ResultAdapter extends test  {
 
 
     @Override
-    public test.ResultAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AbstractorAdapter.ResultAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(R.layout.layout_available_cardview, null);
         return new ResultAdapterViewHolder(view);

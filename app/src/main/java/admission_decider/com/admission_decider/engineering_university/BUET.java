@@ -4,10 +4,18 @@ import admission_decider.com.admission_decider.converter.Converter_gpa;
 import admission_decider.com.admission_decider.university.University;
 
 public class BUET extends EngineeringUniversity implements University {
+    private static BUET buet;
     public Converter_gpa converter_gpa = Converter_gpa.getInstance();
     public final String uni_name = "Bangladesh University of Engineering & Technology";
 
-    public BUET() {
+    private BUET() {
+
+    }
+
+    public static BUET getInstance(){
+        if(buet == null)
+            buet = new BUET();
+        return buet;
     }
 
     public boolean minimum_gpa_english(){
