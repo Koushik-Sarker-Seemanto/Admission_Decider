@@ -6,10 +6,17 @@ import admission_decider.com.admission_decider.university.University;
 
 public class CUET extends EngineeringUniversity  {
 
+    private static CUET cuet;
     public Converter_gpa converter_gpa = Converter_gpa.getInstance();
     public final String uni_name = "Chittagong University of Engineering & Technology";
 
-    public CUET() {
+    private CUET() {
+    }
+
+    public static CUET getInstance(){
+        if(cuet == null)
+            cuet = new CUET();
+        return cuet;
     }
 
     public boolean minimum_gpa_english(){

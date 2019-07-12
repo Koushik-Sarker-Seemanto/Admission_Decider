@@ -1,6 +1,5 @@
 package admission_decider.com.admission_decider.final_result;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,21 +12,21 @@ import admission_decider.com.admission_decider.R;
 import admission_decider.com.admission_decider.engineering_university.EngineeringUniversity;
 import admission_decider.com.admission_decider.university.University;
 
-public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultAdapterViewHolder>  {
+public class ResultAdapter extends test  {
     private Context mCtx;
 
     public ResultAdapter(Context mCtx) {
         this.mCtx = mCtx;
     }
 
+
     @Override
-    public ResultAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public test.ResultAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(R.layout.layout_available_cardview, null);
         return new ResultAdapterViewHolder(view);
     }
 
-    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(ResultAdapterViewHolder holder, final int position) {
         //getting the product of the specified position
@@ -37,12 +36,11 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultAdap
 
          if(product.calculate())
             holder.availability.setText("Available");
-         else {
+         else
              holder.availability.setText("Unavailable");
-             holder.availability.setTextColor(R.color.RED);
-         }
 
     }
+
 
 
 
@@ -52,7 +50,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultAdap
     }
 
 
-    class ResultAdapterViewHolder extends RecyclerView.ViewHolder{
+    /*class ResultAdapterViewHolder extends RecyclerView.ViewHolder{
 
         TextView universityName, availability;
 
@@ -64,5 +62,5 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultAdap
 
 
 
-    }
+    }*/
 }

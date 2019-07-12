@@ -6,12 +6,19 @@ import admission_decider.com.admission_decider.university.University;
 
 public class RUET extends EngineeringUniversity {
 
+    private static RUET ruet;
     public Converter_gpa converter_gpa = Converter_gpa.getInstance();
+
     public final String uni_name = "RUET: Rajshahi University of Engineering & Technology";
 
-    public RUET() {
+    private RUET() {
     }
 
+    public static RUET getInstance(){
+        if(ruet == null)
+            ruet = new RUET();
+        return ruet;
+    }
     public boolean minimum_gpa_english(){
 
         if (converter_gpa.getEnglish()>=3.5){

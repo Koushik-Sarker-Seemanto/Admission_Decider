@@ -28,7 +28,7 @@ public class ResultPage extends AppCompatActivity {
 
 
         //creating recyclerview adapter
-        adapter = new ResultAdapter(this);
+        adapter = (ResultAdapter) AdapterFactory.get(this,1);
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
