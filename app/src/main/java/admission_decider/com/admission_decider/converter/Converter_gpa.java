@@ -1,10 +1,13 @@
 package admission_decider.com.admission_decider.converter;
 
+import android.util.Log;
+
 public class Converter_gpa {
     String bangla,english,ict,physics,chemistry,higerMath,
             biology,ssc_gpa,hsc_gpa;
+    private static Converter_gpa converter_gpa;
 
-    public Converter_gpa(String bangla, String english, String ict, String physics, String chemistry, String higerMath, String biology, String ssc_gpa,String hsc_gpa) {
+    private Converter_gpa(String bangla, String english, String ict, String physics, String chemistry, String higerMath, String biology, String ssc_gpa,String hsc_gpa) {
         this.bangla = bangla;
         this.english = english;
         this.ict = ict;
@@ -15,9 +18,21 @@ public class Converter_gpa {
         this.ssc_gpa = ssc_gpa;
         this.hsc_gpa = hsc_gpa;
     }
+    public static  Converter_gpa getInstance(String bangla, String english, String ict, String physics, String chemistry, String higerMath, String biology, String ssc_gpa,String hsc_gpa){
 
 
-    public double getBangla() {
+            converter_gpa = new Converter_gpa(bangla,english,ict,physics,chemistry,higerMath,biology,ssc_gpa,hsc_gpa);
+            Log.d("TAAAG",bangla);
+
+        Log.d("TAAAG",english);
+        return converter_gpa;
+    }
+    public static Converter_gpa getInstance(){
+        return converter_gpa;
+    }
+
+
+    public  double getBangla() {
         return Double.parseDouble(bangla);
     }
 

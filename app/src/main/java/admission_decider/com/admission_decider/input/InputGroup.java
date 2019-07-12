@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import admission_decider.com.admission_decider.R;
+import admission_decider.com.admission_decider.final_result.ResultObject;
 import admission_decider.com.admission_decider.home.HomeActivity;
 
 public class InputGroup extends AppCompatActivity {
