@@ -10,7 +10,9 @@ import android.widget.EditText;
 
 import admission_decider.com.admission_decider.R;
 import admission_decider.com.admission_decider.converter.Converter_gpa;
+import admission_decider.com.admission_decider.engineering_university.BUET;
 import admission_decider.com.admission_decider.engineering_university.CUET;
+import admission_decider.com.admission_decider.engineering_university.KUET;
 import admission_decider.com.admission_decider.engineering_university.RUET;
 import admission_decider.com.admission_decider.final_result.ResultObject;
 import admission_decider.com.admission_decider.final_result.ResultPage;
@@ -55,10 +57,12 @@ public class ScienceInput extends AppCompatActivity {
                 Log.d("TAGG", banglaGpa);
 
                 Converter_gpa converter_gpa = Converter_gpa.getInstance(banglaGpa,englishGpa,ictGpa,physicsGpa,chemistryGpa,highermathGpa,biologyGpa,sscGpa,hscGpa);
-                Log.d("HI","B A L");
+
                 ResultObject.universityList.clear();
                 ResultObject.universityList.add(new RUET());
                 ResultObject.universityList.add(new CUET());
+                ResultObject.universityList.add(new KUET());
+                ResultObject.universityList.add(new BUET());
                 startActivity(new Intent(getApplicationContext(),ResultPage.class));
             }
         });
