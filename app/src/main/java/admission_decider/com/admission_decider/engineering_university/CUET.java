@@ -1,19 +1,12 @@
 package admission_decider.com.admission_decider.engineering_university;
 
 import admission_decider.com.admission_decider.converter.Converter_gpa;
+import admission_decider.com.admission_decider.university.University;
 
-public class CUET extends EngineeringUniversity {
+public class CUET extends EngineeringUniversity implements University {
 
     public Converter_gpa converter_gpa;
-
-    @Override
-    public boolean calculate() {
-        if(minimum_gpa_english() && minimum_gpa_hsc_ssc()
-                && minimum_gpa_in_20()){
-            return true;
-        }
-        return false;
-    }
+    public final String uni_name = "Chittagong University of Engineering & Technology";
 
     public boolean minimum_gpa_english(){
         if (converter_gpa.getEnglish()>=3.0){
@@ -38,5 +31,18 @@ public class CUET extends EngineeringUniversity {
         else return false;
     }
 
+    public boolean minimum_gpa_physics_chemistry_math(){
+        if((converter_gpa.getPhysics()>=3.5) && (converter_gpa.getChemistry()>3.5)
+        && (converter_gpa.getHigerMath()>3.5) && (converter_gpa.getEnglish()>3.0)){
+            return true;
 
+        }
+        return false;
+    }
+
+
+    @Override
+    public String getUniversityName() {
+        return uni_name;
+    }
 }
